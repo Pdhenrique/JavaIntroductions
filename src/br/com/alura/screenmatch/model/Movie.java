@@ -1,27 +1,13 @@
-public class Movie {
-  String name;
-  int ReleaseYear;
-  boolean includeInPlan;
-  private double ReviewSum;
-  private int totalReviews;
-  int movieDuration;
+package br.com.alura.screenmatch.model;
 
-  int getTotalReviews(){
-    return totalReviews;
+public class Movie extends Title{
+  private String diretor;
+
+  public String getDiretor() {
+    return diretor;
   }
 
-  void displayTechnicalSheet() {
-    System.out.println(name);
-    System.out.println(ReleaseYear);
-  };
-
-  void rateMovie(double note ) {
-    ReviewSum += note;
-    totalReviews ++;
+  public void setDiretor(String diretor) {
+    this.diretor = diretor;
   }
-
-  double averageReview(){
-   return ReviewSum / totalReviews;
-  }
-
 }
